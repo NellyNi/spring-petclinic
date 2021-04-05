@@ -15,7 +15,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sh 'java -jar target/*.jar --httpPort=9090'
+        sh 'java -jar target/*.jar'
       }
     }
 
