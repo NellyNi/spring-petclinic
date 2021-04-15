@@ -9,7 +9,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sh 'java -jar target/*.jar'
+        sh 'cp /home/vagrant/deployment.yml ./deployment-playbook.yml && cp /home/vagrant/Dockerfile ./ && ansible-playbook --user=vagrant deployment-playbook.yml ; rm deployment-playbook.yml ; rm Dockerfile'
       }
     }
 
