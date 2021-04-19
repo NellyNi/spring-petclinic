@@ -15,7 +15,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        sh 'cp /home/vagrant/deployment.yml ./deployment-playbook.yml && cp /home/vagrant/Dockerfile ./ && ansible-playbook --user=vagrant deployment-playbook.yml ; rm deployment-playbook.yml ; rm Dockerfile'
+        sh 'cp /home/vagrant/playbook.yml ./playbook.yml && cp /home/vagrant/Dockerfile ./ && ansible-playbook --user=vagrant playbook.yml ; rm playbook.yml ; rm Dockerfile'
       }
     }
 
